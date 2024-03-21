@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zen Trades Task 2</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="import-container">
+    <h2>Import Products</h2>
+      <div class="steps-container">
+          <div class="step file-selection">
+              <div>Step 1: Select File</div>
+              <div class="step-one">
+                <input type="file" id="fileInput" accept=".json,.csv">
+                <p>Supported File Type(s): .CSV, .JSON</p>
+              </div>
+          </div>
+  
+
+          <div class="step format-specification">
+              <div>Step 2: Specify Format</div>
+              <div class="setp-two">
+                <div class="form-group">
+                  <label for="fileType">File Type</label>
+                  <select id="fileType" name="fileType">
+                    <option value="csv">CSV</option>
+                    <option value="json">JSON</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="encoding">Character Encoding</label>
+                  <select id="encoding" name="encoding">
+                    <option value="utf8">UTF-8</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="delimiter">Delimiter</label>
+                  <select id="delimiter" name="delimiter">
+                    <option value="comma">Comma</option>
+                  </select>
+                </div>
+                <div class="form-group checkbox-container">
+                  <input type="checkbox" id="hasHeader" name="hasHeader" checked />
+                  <label for="hasHeader">Has Header</label>
+                </div>
+              </div>
+          </div>
+      </div>
+
+
+    <div class="step" id="step3">
+        <div>Step 3: Display Handling</div>
+        <div class="step-3">
+          <p>Select the fields to be displayed</p>
+          <div class="fields-container">
+              <div class="available-fields" id="availableFields">
+                  <p>Available Fields</p>
+              </div>
+              <div class="fields-to-display" id="fieldsToDisplay">
+                  <p>Fields to be Displayed</p>
+              </div>
+          </div>
+        </div>
+  
+    </div>
+    <div class="buttons">
+      <button type="button" id="nextButton">Next</button>
+      <button type="button" id="cancelButton">Cancel</button>
+  </div>
+    <table id="productTable">
+      <thead>
+        <tr id="tableHeader">
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
